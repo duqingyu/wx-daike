@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/my/my",
+    "pages/mysendorder/mysendorder",
+    "pages/myreorder/myreorder",
+    "pages/nearby/nearby",
+    "pages/map/map",
+    "pages/lookmap/lookmap"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#004B97",
+    "navigationBarTitleText": "代客",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "发单",
+        "iconPath": "./images/first1.png",
+        "selectedIconPath": "./images/first2.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "接单",
+        "iconPath": "./images/list1.png",
+        "selectedIconPath": "./images/list2.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "./images/my1.png",
+        "selectedIconPath": "./images/my2.png"
+      }
+    ]
+  }
+}

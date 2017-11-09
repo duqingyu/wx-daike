@@ -1,0 +1,2 @@
+<!--pages/lookmap/lookmap.wxml-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}"  markers="{{markers}}"  show-location style="width: 100%; height: {{view.Height}}px;"></map>

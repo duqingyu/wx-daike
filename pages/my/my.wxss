@@ -1,0 +1,82 @@
+/* pages/my/my.wxss */
+page{
+  background-color: 	#E0E0E0;
+  height:100%;
+}
+.first{
+  background-color:	#004B97;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.first image{
+  width:70px;
+  height: 70px;
+  border-radius: 50%;
+  margin:10px;
+}
+.first text{
+ color:white;
+ margin-top:3px;
+ font-size: 15px;
+ margin-bottom: 30px;
+}
+.second{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  align-self: center;
+  margin: 13px;
+}
+.second-image{
+  width:20px;
+  height:20px;
+}
+.second1{
+margin: 10px;
+}
+.second text{
+  margin-left: 10px;
+}
+.second2{
+margin: 10px;
+border-top:1px #E0E0E0 solid; 
+}
+.second3{
+margin: 10px;
+}
+.third{
+  background-color: white;
+  margin: 13px;
+  height:50px;
+  line-height:50px;   
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.third-image{
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+}
+.third-image2{
+  width: 20px;
+  height: 20px;
+  float: right;
+  margin: 10px;
+}
+.button1{
+  margin-left:0;
+  font-size: 17px;
+  background-color:white; 
+  font-family: "微软雅黑";
+}
+.button1::after{
+  border:none;
+}
+.right{
+  width: 20px;
+  height: 20px;
+  float:right;
+}

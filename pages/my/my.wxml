@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+
+<view class='container'>
+ <view class='first'> 
+  <image src='{{avatar}}'></image>
+  <text wx:if="{{islogin}}" bindtap="Tologin">{{tologin}}</text>
+  <text wx:if="{{name}}">{{username}}</text>
+ </view>
+ <view class='second'> 
+  <view class='second1'>
+  <image src='../../images/buy-order.png' class='second-image'></image>
+  <text class='text1' bindtap="relist">我接收的订单</text>
+  <image src='../../images/right.png' class='right'></image>
+  </view>
+  <view class='second2'></view>
+  <view class='second3'>
+  <image src='../../images/send-order.png' class='second-image'></image>
+  <text class='text2' bindtap="sendlist">我发布的订单</text>
+  <image src='../../images/right.png' class='right'></image>
+  </view>
+ </view>
+ <view class='third'>
+ <image src='../../images/sex.png' class='third-image'></image>
+ <button  disabled="{{disabled}}" loading="{{loading}}" class="button1" bindtap="near">附近的人</button>
+ <image src='../../images/right.png' class='third-image2'></image>
+ </view>
+</view>

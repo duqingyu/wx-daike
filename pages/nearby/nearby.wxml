@@ -1,0 +1,22 @@
+<!--pages/nearby/nearby.wxml-->
+<view class="headers" wx:if="{{refreshs}}">
+<icon type="waiting" size="17" color="green" />
+<text>刷新中...</text>
+</view>
+<view class="header" wx:if="{{refresh}}">下拉刷新</view>
+<view class="container">
+   <scroll-view class="bodys" wx:for="{{result}}" wx:key="">
+    <view class='total'>
+      <view>
+    <image src="{{item.avatar}}"></image>
+      </view>
+       <view class='datas'>
+         <view class='username'>
+         <text>{{item.username}}</text>
+         <image src="{{item.gender}}"></image>
+         </view>
+         <text class='distance'>相距{{item.distance}}米</text>
+        </view>
+    </view>
+   </scroll-view>
+</view>

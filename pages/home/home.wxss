@@ -1,0 +1,61 @@
+/* pages/home/home.wxss */
+page{
+background-color: 	#d0d0d0;
+  height:100%;
+}
+.swiper-tab{ 
+ width: 100%; 
+ text-align: center; 
+ line-height: 80rpx; 
+ border-bottom: 1px solid #000; 
+ display: flex; 
+ flex-direction: row; 
+ justify-content: center; 
+} 
+.tab-item{ 
+ flex: 1; 
+ font-size: 30rpx; 
+ display: inline-block;  
+ color: #777777; 
+} 
+.on{ 
+ color:	greenyellow; 
+ border-bottom: 5rpx solid 	#005AB5; 
+} 
+.container{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background:linear-gradient(	#004B97,		#97CBFF);
+}
+.sendlist{
+  display: flex;
+  flex-direction: column;
+  margin: 40rpx;
+}
+.sendlist text{
+  color:red;
+}
+.input-class{
+  margin-top: 30px;
+
+}
+.sendlist input{
+  width: 100%;
+  height: 70rpx;
+  border-radius: 5px;
+  border-bottom: #9D9D9D 1px solid;
+}
+#remark{
+  height: 140rpx;
+}
+#remark1{
+  height: 140rpx;
+}
+.confirm{
+  width: 80%;
+  margin-top:10px;
+  margin-bottom: 5px;
+  background:linear-gradient(to right,#02DF82,#C2FF68);
+}

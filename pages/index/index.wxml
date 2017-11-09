@@ -1,0 +1,79 @@
+<!--index.wxml-->
+<view wx:if="{{neverlogin}}" class='neverlogin'>
+<image src='../../images/4.png'></image>
+<text>授权登录后才能使用哦</text>
+</view>
+<!--顶部导航-->
+<view wx:if="{{fesh}}" class="refesh"><icon type="waiting" size="17" color="green" /><text>刷新中...</text></view>
+<view wx:if="{{dologin}}">
+<view class="swiper-tab"> 
+ <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">快递</view> 
+ <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">外卖</view> 
+</view> 
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{containerHeight}}px;" bindchange="bindChange">
+<!--快递-->
+<swiper-item> 
+<!--搜索框-->
+<view class="input">
+<input type='search' id="search" bindinput='search' auto-focus="true" placeholder-style="text-align:center;color:	#C6A300;font-size:13px;" placeholder='在此输入学校名称快速查询' />
+<image src='../../images/search.png'></image>
+</view>
+<!--快递订单信息-->
+<view class='container'>
+ <scroll-view wx:for="{{list}}" wx:key="" >
+  <view class='order'>
+     <view class='sendlist'>
+       <view class='images'>
+       <image src='{{item.avatar}}'></image>
+     <text class='name'>{{item.username}}</text>
+       </view>
+   <view class='information'>
+   <text class='text1'>{{item.time}}</text>
+   <text class='text2'>{{item.position}}</text>
+   <text class='text3'>{{item.destin}}</text>
+   </view>
+     </view>
+    <view class='RMB'>{{item.RMB}}元人民币
+  <text class='remark' id="{{index}}" bindtap="remark">备注</text>
+   </view>
+  <view class='school'>
+  <text>@{{item.school}}</text>
+  <text class="use-order" id="{{index}}" bindtap="relist">{{item.sta}}</text>
+  </view>
+  </view>
+ </scroll-view>
+</view>
+</swiper-item> 
+<!--外卖-->
+<swiper-item> 
+<view class="input">
+<input type='search' id="search1" bindinput='search1' placeholder-style="text-align:center;color:	#C6A300;font-size:13px;" placeholder='在此输入学校名称快速查询' />
+<image src='../../images/search.png'></image>
+</view>
+<view class='container'>
+ <scroll-view wx:for="{{foodlist}}" wx:key="" >
+  <view class='order'>
+     <view class='sendlist'>
+       <view class='images'>
+       <image src='{{item.avatar}}'></image>
+     <text class='name'>{{item.username}}</text>
+       </view>
+   <view class='information'>
+   <text class='text1'>{{item.time}}</text>
+   <text class='text2'>{{item.position}}</text>
+   <text class='text3'>{{item.destin}}</text>
+   </view>
+     </view>
+    <view class='RMB'>{{item.RMB}}元人民币
+  <text class='remark' id="{{index}}" bindtap="remark">备注</text>
+   </view>
+  <view class='school'>
+  <text>@{{item.school}}</text>
+  <text class="use-order" id="{{index}}" bindtap="relist1">{{item.sta}}</text>
+  </view>
+  </view>
+ </scroll-view>
+</view>
+</swiper-item> 
+</swiper>
+</view>

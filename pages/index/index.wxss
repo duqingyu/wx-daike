@@ -1,0 +1,127 @@
+page{
+  height: 100%;
+}
+.swiper-tab{ 
+ width: 100%; 
+ text-align: center; 
+ line-height: 80rpx; 
+ border-bottom: 1px solid #000; 
+ display: flex; 
+ flex-direction: row; 
+ justify-content: center; 
+} 
+.tab-item{ 
+ flex: 1; 
+ font-size: 30rpx; 
+ display: inline-block;  
+ color: #777777; 
+} 
+.on{ 
+ color:red; 
+ border-bottom: 5rpx solid 	red; 
+} 
+.input{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 3%;
+}
+.input input{
+  width:98%;
+}
+.input image{
+  width: 25px;
+  height: 25px;
+}
+.container{
+  background-color: 	#d0d0d0;
+}
+.order{
+  display: flex;
+  flex-direction: column;
+  margin:5px;
+  background-color: white;
+  width: 95%;
+  height:170px;
+  border-radius: 3%;
+}
+.sendlist{
+  display: flex;
+  flex-direction: row;
+  height: 60%;
+  border-bottom: 1px 	#E0E0E0 solid;
+}
+.images{
+  display: flex;
+  flex-direction: column;
+  margin:10px;
+  width:25%;
+}
+.images image{
+width:50px;
+height:50px;
+border-radius: 50%;
+}
+.name{
+  font-size: 13px;
+  margin: 2px;
+}
+.information{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+.information text{
+  margin:4px;
+}
+.text1{
+ color:#3C3C3C;
+ font-size: 15px;
+}
+.text2{
+color:	#4F4F4F;
+font-size: 15px;
+}
+.text3{
+color:#5B5B5B;
+font-size: 15px;
+}
+.RMB{
+  margin-top: 10px;
+  margin-left:10px;
+  height: 25%;
+}
+.remark{
+  float:right;
+  font-size: 15px;
+  margin-right: 10px;
+  color:#005AB5;
+}
+.school{
+  height: 15%;
+  margin-left:9px;
+  margin-top:3px;
+  font-size: 15px;
+  color:	#9D9D9D;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.use-order{
+  color:red;
+  margin-right: 10px;
+}
+.refesh{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+  margin:2px;
+}
+.refesh text{
+  font-size:16px;
+  color: green;
+  margin-left:3px;
+}

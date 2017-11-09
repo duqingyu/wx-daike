@@ -1,0 +1,16 @@
+/**app.wxss**/
+.neverlogin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+}
+.neverlogin image{
+  width: 200px;
+  height: 200px;
+}
+.neverlogin text{
+  font-size: 25px;
+}

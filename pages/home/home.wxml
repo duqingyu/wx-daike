@@ -1,0 +1,69 @@
+<!--pages/home/home.wxml-->
+<view wx:if="{{neverlogin}}" class='neverlogin'>
+<image src='../../images/4.png'></image>
+<text>授权登录后才能使用哦</text>
+</view>
+<view wx:if="{{dologin}}" class='container'>
+  <!--导航栏-->
+  <view class="swiper-tab"> 
+  <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">快递</view> 
+  <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">外卖</view> 
+  </view> 
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{containerHeight}}px" bindchange="bindChange">
+  <!--导航栏-->
+  <!--快递-->
+  <swiper-item> 
+  <view class="input-class">
+ <view class='sendlist'>
+   <input type='text' id="school" bindinput='information' placeholder='请输入学校名称' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="position" bindinput='information' placeholder='请输入代拿地点' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="destin" bindinput='information' placeholder='请输入目的地' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="phone" bindinput='information' placeholder='请输入手机号码' placeholder-style="font-size:15px;color:white" />
+   <text wx:if="{{phonetip}}">*请输入正确的手机号码</text>
+ </view>
+   <view class='sendlist'>
+   <input type='text' id="money" bindinput='information' placeholder='请输入代拿费用(元)' placeholder-style="font-size:15px;color:white" />
+   <text wx:if="{{moneytip}}">*代拿费用只能输入数字</text>
+ </view>
+   <view class='sendlist'>
+   <input type='text' id="remark" bindinput='information' placeholder='请输入备注' placeholder-style="text-align:center;color:white" />
+ </view>
+ <button class='confirm' bindtap="sendlist">确定</button>
+ </view>
+  </swiper-item> 
+   <!--快递-->
+   <!--外卖-->
+    <swiper-item> 
+    <view class="input-class">
+ <view class='sendlist'>
+   <input type='text' id="school1" bindinput='information1' placeholder='请输入学校名称' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="position1" bindinput='information1' placeholder='请输入代拿地点（如地址+某某外卖）' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="destin1" bindinput='information1' placeholder='请输入送达地点' placeholder-style="font-size:15px;color:white" />
+ </view>
+  <view class='sendlist'>
+   <input type='text' id="phone1" bindinput='information1' placeholder='请输入手机号码（请确保手机正确）' placeholder-style="font-size:15px;color:white" />
+   <text wx:if="{{phonetip1}}">*请输入正确的手机号码</text>
+ </view>
+   <view class='sendlist'>
+   <input type='text' id="money1" bindinput='information1' placeholder='请输入代拿费用(元)' placeholder-style="font-size:15px;color:white" />
+   <text wx:if="{{moneytip1}}">*代拿费用只能输入数字</text>
+ </view>
+   <view class='sendlist'>
+   <input type='text' id="remark1" bindinput='information1' placeholder='请输入备注' placeholder-style="text-align:center;color:white" />
+ </view>
+ <button class='confirm' bindtap="sendlist1">确定</button>
+ </view>
+    </swiper-item> 
+    </swiper>
+   <!--外卖-->
+</view>

@@ -1,0 +1,106 @@
+<!--pages/myreorder/myreorder.wxml-->
+<view class="swiper-tab"> 
+ <view class="tab-item {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">快递</view> 
+ <view class="tab-item {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">外卖</view> 
+</view> 
+<swiper current="{{currentTab}}" class="swiper" duration="300" style="height:{{containerHeight}}px" bindchange="bindChange">
+<swiper-item>
+<view class="container">
+ <scroll-view class="scroll-view" wx:for="{{myreorder}}" wx:key="key" > 
+   <view class="total">
+      <view class="total1">发单时间</view>
+      <view class="total2">{{item.time}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">发单人</view>
+      <view class="total2"><image class="avatar" src="{{item.avatar}}"></image>{{item.username}}</view>
+   </view>
+   <view class="total">
+      <view class="total1">起点</view>
+      <view class="total2">{{item.position}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">终点</view>
+      <view class="total2">{{item.destin}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">发单者手机</view>
+      <view class="total2" id="{{index}}" bindtap="callphone" style="color:#005AB5">{{item.phone}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">回报(元)</view>
+      <view class="total2" style="color:green">{{item.RMB}}元</view>
+   </view>
+
+   <view class="total">
+      <view class="beizhu">备注</view>
+   </view>
+   <view class="total">
+      <view class="beizhu1"><text>{{item.remark}}</text></view>
+   </view>
+    <view class="total">
+      <view class='school'> 
+      <text class='schoollist'>
+      <text style='color:#005AB5'>@</text>{{item.school}}
+      </text>
+      <text class='status'>{{item.status}}</text>
+     </view>  
+   </view>
+     <view class="total">
+      <view class="people" >
+      <text id="{{index}}" bindtap='tomap'>进入骑手定位</text></view>
+   </view>
+ </scroll-view>
+</view>
+</swiper-item> 
+<!--外卖-->
+<swiper-item>
+<view class="container">
+ <scroll-view class="scroll-view" wx:for="{{foodlist}}" wx:key="key" > 
+   <view class="total">
+      <view class="total1">发单时间</view>
+      <view class="total2">{{item.time}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">发单人</view>
+      <view class="total2"><image class="avatar" src="{{item.avatar}}"></image>{{item.username}}</view>
+   </view>
+   <view class="total">
+      <view class="total1">起点</view>
+      <view class="total2">{{item.position}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">终点</view>
+      <view class="total2">{{item.destin}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">发单者手机</view>
+      <view class="total2" id="{{index}}" bindtap="callphone1" style="color:#005AB5">{{item.phone}}</view>
+   </view>
+    <view class="total">
+      <view class="total1">回报(元)</view>
+      <view class="total2" style="color:green">{{item.RMB}}元</view>
+   </view>
+
+   <view class="total">
+      <view class="beizhu">备注</view>
+   </view>
+   <view class="total">
+      <view class="beizhu1"><text>{{item.remark}}</text></view>
+   </view>
+    <view class="total">
+      <view class='school'> 
+      <text class='schoollist'>
+      <text style='color:#005AB5'>@</text>{{item.school}}
+      </text>
+      <text class='status'>{{item.status}}</text>
+      </view>
+   </view>
+   <view class="total">
+      <view class="people" >
+      <text id="{{index}}" bindtap='tomap'>进入骑手定位</text></view>
+   </view>
+ </scroll-view>
+</view>
+</swiper-item> 
+</swiper>
